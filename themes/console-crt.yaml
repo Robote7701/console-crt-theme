@@ -1,0 +1,248 @@
+# Console CRT — thème Home Assistant façon console de vaisseau des années 70-80,
+# texte kaki pâle et vert phosphore sur fond noir, avec filtre écran cathodique.
+# Les effets (filtre CRT, titres, barres des cartes) demandent card-mod.
+# https://github.com/Robote7701/console-crt-theme — Licence MIT.
+Console CRT:
+  card-mod-theme: Console CRT
+
+  # Polices
+  primary-font-family: "\"Share Tech Mono\", \"VT323\", \"Courier New\", monospace"
+  paper-font-common-base_-_font-family: "\"Share Tech Mono\", \"VT323\", \"Courier New\", monospace"
+  paper-font-body1_-_font-family: "\"Share Tech Mono\", \"VT323\", \"Courier New\", monospace"
+  ha-font-family-body: "\"Share Tech Mono\", \"VT323\", \"Courier New\", monospace"
+  ha-font-family-heading: "\"VT323\", \"Share Tech Mono\", \"Courier New\", monospace"
+  ha-font-family-code: "\"Share Tech Mono\", \"VT323\", \"Courier New\", monospace"
+  ha-font-family-longform: "\"Share Tech Mono\", \"VT323\", \"Courier New\", monospace"
+
+  # Couleurs principales
+  primary-color: "#5ee08a"
+  rgb-primary-color: "94, 224, 138"
+  accent-color: "#e8b04a"
+  rgb-accent-color: "232, 176, 74"
+  dark-primary-color: "#2f7a4a"
+  light-primary-color: "#123020"
+  text-primary-color: "#070b09"
+  text-accent-color: "#070b09"
+
+  # Fonds et cartes
+  primary-background-color: "#070b09"
+  secondary-background-color: "#0b120e"
+  rgb-primary-background-color: "7, 11, 9"
+  card-background-color: "#0a110d"
+  ha-card-background: "rgba(10, 17, 13, 0.94)"
+  ha-card-border-radius: "0px"
+  ha-card-border-width: "1px"
+  ha-card-border-color: "rgba(94, 224, 138, 0.16)"
+  ha-card-box-shadow: "none"
+  ha-badge-border-radius: "0px"
+
+  # Textes
+  primary-text-color: "#cdd6b0"
+  rgb-primary-text-color: "205, 214, 176"
+  secondary-text-color: "#8f9c7a"
+  disabled-text-color: "#4f5c46"
+  divider-color: "rgba(205, 214, 176, 0.10)"
+  outline-color: "rgba(94, 224, 138, 0.16)"
+
+  # En-tête et barre latérale
+  app-header-background-color: "#070b09"
+  app-header-text-color: "#a7e8bf"
+  app-header-border-bottom: "1px solid rgba(94, 224, 138, 0.16)"
+  sidebar-background-color: "#050806"
+  sidebar-text-color: "#8f9c7a"
+  sidebar-icon-color: "#8f9c7a"
+  sidebar-selected-text-color: "#5ee08a"
+  sidebar-selected-icon-color: "#5ee08a"
+  sidebar-menu-button-text-color: "#a7e8bf"
+
+  # États
+  state-icon-color: "#8f9c7a"
+  state-active-color: "#5ee08a"
+  state-inactive-color: "#4f5c46"
+  rgb-state-inactive-color: "79, 92, 70"
+  state-on-color: "#5ee08a"
+  state-off-color: "#4f5c46"
+  state-unavailable-color: "#3a4535"
+  paper-item-icon-color: "#8f9c7a"
+  paper-item-icon-active-color: "#5ee08a"
+
+  # Contrôles et fenêtres
+  mdc-theme-primary: "#5ee08a"
+  mdc-theme-secondary: "#e8b04a"
+  mdc-theme-surface: "#0a110d"
+  mdc-theme-on-primary: "#070b09"
+  mdc-theme-text-primary-on-background: "#cdd6b0"
+  mdc-theme-text-secondary-on-background: "#8f9c7a"
+  mdc-text-field-fill-color: "#0b120e"
+  input-fill-color: "#0b120e"
+  input-ink-color: "#cdd6b0"
+  input-label-ink-color: "#8f9c7a"
+  mdc-select-fill-color: "#0b120e"
+  code-editor-background-color: "#0a110d"
+  markdown-code-background-color: "#0b120e"
+  ha-dialog-surface-background: "#0a110d"
+  dialog-backdrop-color: "rgba(3, 6, 4, 0.8)"
+  switch-checked-color: "#5ee08a"
+  switch-checked-button-color: "#5ee08a"
+  switch-checked-track-color: "#2f7a4a"
+  switch-unchecked-button-color: "#8f9c7a"
+  switch-unchecked-track-color: "#1d241b"
+  slider-color: "#5ee08a"
+  slider-track-color: "#123020"
+  paper-slider-knob-color: "#5ee08a"
+  paper-slider-active-color: "#5ee08a"
+  chip-background-color: "#0b120e"
+  badge-background-color: "#0a110d"
+  ha-color-primary-40: "#5ee08a"
+  ha-color-primary-50: "#5ee08a"
+  ha-color-primary-60: "#2f7a4a"
+  ha-color-primary-90: "#123020"
+  ha-color-primary-95: "#0b120e"
+  ha-color-fill-primary-quiet-resting: "#0b120e"
+  ha-color-fill-primary-normal-resting: "#123020"
+  ha-color-fill-primary-loud-resting: "#5ee08a"
+  ha-color-on-primary-normal: "#5ee08a"
+  ha-color-on-primary-loud: "#070b09"
+  ha-color-border-primary-normal: "#2f7a4a"
+  scrollbar-thumb-color: "#123020"
+
+  # Alertes et graphiques
+  error-color: "#e8574a"
+  warning-color: "#e8b04a"
+  success-color: "#5ee08a"
+  info-color: "#5fd6c0"
+  graph-color-1: "#5ee08a"
+  graph-color-2: "#e8b04a"
+  graph-color-3: "#5fd6c0"
+  graph-color-4: "#cdd6b0"
+  graph-color-5: "#e8574a"
+  energy-grid-consumption-color: "#e8b04a"
+  energy-solar-color: "#d9d36a"
+
+  # Couleurs nommées (tuiles, Mushroom…) adoucies façon terminal
+  green-color: "#5ee08a"
+  rgb-green: "94, 224, 138"
+  rgb-green-color: "94, 224, 138"
+  light-green-color: "#8fe3a0"
+  rgb-light-green: "143, 227, 160"
+  rgb-light-green-color: "143, 227, 160"
+  lime-color: "#b9e36a"
+  rgb-lime: "185, 227, 106"
+  rgb-lime-color: "185, 227, 106"
+  teal-color: "#5fd6c0"
+  rgb-teal: "95, 214, 192"
+  rgb-teal-color: "95, 214, 192"
+  cyan-color: "#5fd6c0"
+  rgb-cyan: "95, 214, 192"
+  rgb-cyan-color: "95, 214, 192"
+  light-blue-color: "#6fc3d6"
+  rgb-light-blue: "111, 195, 214"
+  rgb-light-blue-color: "111, 195, 214"
+  blue-color: "#6fa9d6"
+  rgb-blue: "111, 169, 214"
+  rgb-blue-color: "111, 169, 214"
+  indigo-color: "#7f8fd6"
+  rgb-indigo: "127, 143, 214"
+  rgb-indigo-color: "127, 143, 214"
+  blue-grey-color: "#8f9c7a"
+  rgb-blue-grey: "143, 156, 122"
+  rgb-blue-grey-color: "143, 156, 122"
+  grey-color: "#4f5c46"
+  rgb-grey: "79, 92, 70"
+  rgb-grey-color: "79, 92, 70"
+  yellow-color: "#d9d36a"
+  rgb-yellow: "217, 211, 106"
+  rgb-yellow-color: "217, 211, 106"
+  amber-color: "#e8b04a"
+  rgb-amber: "232, 176, 74"
+  rgb-amber-color: "232, 176, 74"
+  orange-color: "#e8913a"
+  rgb-orange: "232, 145, 58"
+  rgb-orange-color: "232, 145, 58"
+  deep-orange-color: "#e8743a"
+  rgb-deep-orange: "232, 116, 58"
+  rgb-deep-orange-color: "232, 116, 58"
+  brown-color: "#b08a5a"
+  rgb-brown: "176, 138, 90"
+  rgb-brown-color: "176, 138, 90"
+  red-color: "#e8574a"
+  rgb-red: "232, 87, 74"
+  rgb-red-color: "232, 87, 74"
+  pink-color: "#e06a8f"
+  rgb-pink: "224, 106, 143"
+  rgb-pink-color: "224, 106, 143"
+  purple-color: "#b98fd6"
+  rgb-purple: "185, 143, 214"
+  rgb-purple-color: "185, 143, 214"
+  deep-purple-color: "#9a85d6"
+  rgb-deep-purple: "154, 133, 214"
+  rgb-deep-purple-color: "154, 133, 214"
+
+  # Effets (card-mod)
+  card-mod-card: |
+      /* Grandes cartes : barre verte en haut, comme les panneaux d'une console */
+      :host(hui-weather-forecast-card) ha-card, :host(hui-markdown-card) ha-card, :host(hui-entities-card) ha-card,
+      :host(hui-statistics-graph-card) ha-card, :host(hui-history-graph-card) ha-card, :host(hui-media-control-card) ha-card,
+      :host(hui-thermostat-card) ha-card, :host(mini-graph-card) ha-card {
+        border-top: 3px solid #5ee08a !important;
+      }
+      /* Titres de section : majuscules espacées, en vert, précédés d'un chevron */
+      :host(hui-heading-card) ha-card {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: #a7e8bf;
+        --primary-text-color: #a7e8bf;
+        --secondary-text-color: #5ee08a;
+      }
+      :host(hui-heading-card) .content h2::before,
+      :host(hui-heading-card) .content p::before {
+        content: "> ";
+        color: #5ee08a;
+      }
+  card-mod-view: |
+      /* Texte légèrement lumineux, comme sur un tube cathodique */
+      :host {
+        text-shadow: 0 0 2px rgba(205, 214, 176, 0.30), 0 0 9px rgba(94, 224, 138, 0.14);
+        letter-spacing: 0.04em;
+        font-synthesis: none;
+      }
+      /* Filtre CRT : lignes de balayage, halo vert, bords assombris, léger scintillement */
+      :host::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 10;
+        background:
+          repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.20) 0, rgba(0, 0, 0, 0.20) 1px, transparent 1px, transparent 3px),
+          radial-gradient(ellipse at 30% 0%, rgba(94, 224, 138, 0.07) 0%, transparent 55%),
+          radial-gradient(ellipse at center, transparent 62%, rgba(0, 0, 0, 0.28) 85%, rgba(0, 0, 0, 0.6) 100%);
+        animation: crt-flicker 6s infinite steps(1, end);
+      }
+      /* Allumage du tube à l'ouverture de l'onglet : une ligne qui s'ouvre puis s'efface */
+      :host::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 11;
+        background: #070b09;
+        animation: crt-boot 1.3s ease-out 1 both;
+      }
+      @keyframes crt-boot {
+        0% { opacity: 1; background: #a7e8bf; clip-path: inset(49.6% 0 49.6% 0); }
+        22% { opacity: 1; background: #a7e8bf; clip-path: inset(49.6% 0 49.6% 0); }
+        45% { opacity: 0.95; background: #070b09; clip-path: inset(0 0 0 0); }
+        100% { opacity: 0; background: #070b09; clip-path: inset(0 0 0 0); }
+      }
+      @keyframes crt-flicker {
+        0%, 100% { opacity: 1; }
+        41% { opacity: 0.94; }
+        42% { opacity: 1; }
+        77% { opacity: 0.97; }
+        78% { opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        :host::after, :host::before { animation: none; }
+        :host::before { display: none; }
+      }
