@@ -2,11 +2,21 @@
 
 Thème Home Assistant façon **console de vaisseau des années 70-80** : fond quasi noir, texte kaki pâle, vert phosphore en accent, police de terminal et **filtre écran cathodique** (lignes de balayage, halo, scintillement) et séquence d'initialisation en ligne de commande à l'ouverture.
 
-![Aperçu (maquette)](images/preview.png)
+![Démonstration : séquence d'initialisation puis tableau de bord](images/demo.gif)
 
 > 🇬🇧 [English version below](#-english)
 
 ---
+
+## 🖼️ Captures
+
+| Ordinateur | Téléphone |
+|---|---|
+| ![Tableau de bord sur ordinateur](images/desktop.webp) | ![Tableau de bord sur téléphone](images/mobile.webp) |
+
+<p align="center"><img src="images/details.webp" alt="Détail : titres de section, tuiles et interrupteurs" width="420"></p>
+
+<sub>Rendus d'un tableau de bord de démonstration avec les styles réels du thème (données fictives).</sub>
 
 ## ✨ Ce que fait le thème
 
