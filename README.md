@@ -14,7 +14,7 @@ Thème Home Assistant façon **console de vaisseau des années 70-80** : fond qu
 - **Cartes** à angles droits avec un liseré fin. Les grandes cartes (météo, graphiques, markdown, listes d'entités, lecteur média, thermostat) ont une barre verte en haut, comme les panneaux d'une console.
 - **Titres de section** en majuscules espacées, en vert, précédés d'un chevron `>`.
 - **Filtre CRT** : lignes de balayage, halo vert, bords assombris, texte légèrement lumineux et léger scintillement.
-- **Initialisation** : à l'ouverture d'un onglet, quelques lignes de commande s'écrivent (« > INITIALISATION DE LA CONSOLE… », « > INTERFACE PRÊTE ») puis l'écran apparaît.
+- **Initialisation** : à l'ouverture d'un onglet, quelques lignes de commande s'écrivent (« > INITIALIZING CONSOLE… », « > INTERFACE READY ») puis l'écran apparaît. Elle est **optionnelle** : choisis le thème `Console CRT (no intro)` pour t'en passer.
 - Respecte le réglage « réduire les animations » du système.
 
 ## ✅ Ce qu'il faut avant
@@ -34,9 +34,9 @@ frontend:
 1. HACS → **⋮** → Dépôts personnalisés → `https://github.com/Robote7701/console-crt-theme`, catégorie **Thème**, puis **Télécharger**.
 2. Recharge les thèmes : Outils de développement → Actions → `frontend.reload_themes`.
 3. **Polices** (recommandé) : Paramètres → Tableaux de bord → **⋮** → Ressources → **Ajouter**, URL `https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap`, type **Feuille de style**. Sans elles, le thème utilise une police monospace du système.
-4. Choisis le thème :
-   - pour toute l'interface : ton profil → **Thème** → `Console CRT` ;
-   - ou pour un seul onglet : modifie l'onglet → **Thème** → `Console CRT`.
+4. Choisis le thème, `Console CRT` (avec la séquence d'initialisation) ou `Console CRT (no intro)` (sans) :
+   - pour toute l'interface : ton profil → **Thème** ;
+   - ou pour un seul onglet : modifie l'onglet → **Thème**.
 
 ℹ️ Pour que card-mod applique le thème plus vite au chargement, tu peux aussi le déclarer en `extra_module_url` (voir la doc de card-mod).
 
@@ -46,7 +46,7 @@ Tout est dans `themes/console-crt.yaml` :
 
 - les couleurs en haut du fichier (`primary-color`, `primary-text-color`…) ;
 - l'intensité des lignes de balayage : `rgba(0, 0, 0, 0.20)` dans `card-mod-view` ;
-- la séquence d'initialisation : change les textes dans `@keyframes crt-boot-text`, ou supprime le bloc `:host::before` si tu n'en veux pas.
+- la séquence d'initialisation : `crt-boot-display: block` pour l'activer, `none` pour la désactiver ; les textes sont dans `@keyframes crt-boot-text`.
 
 ## ⚠️ Limites
 
@@ -68,9 +68,9 @@ A Home Assistant theme styled like a **1970s–80s starship console**: near-blac
 
 **Requirements:** [card-mod](https://github.com/thomasloven/lovelace-card-mod) for the effects (without it, only the colours apply), and `frontend: themes: !include_dir_merge_named themes` in `configuration.yaml`.
 
-**Install:** HACS → Custom repositories → `https://github.com/Robote7701/console-crt-theme`, category **Theme** → Download → run `frontend.reload_themes`. For the fonts, add `https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap` as a **Stylesheet** dashboard resource. Then pick `Console CRT` in your profile, or set it on a single view.
+**Install:** HACS → Custom repositories → `https://github.com/Robote7701/console-crt-theme`, category **Theme** → Download → run `frontend.reload_themes`. For the fonts, add `https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap` as a **Stylesheet** dashboard resource. Then pick `Console CRT` or `Console CRT (no intro)` in your profile, or set it on a single view.
 
-**What it does:** square cards with thin borders, a green top bar on large cards, uppercase green section headings with a `>` prefix, softened named colours, scanlines, green glow, dark edges, subtle flicker and a short command-line boot sequence (French text, editable in `@keyframes crt-boot-text`). Respects the system "reduce motion" setting. Customise colours and effects in `themes/console-crt.yaml`.
+**What it does:** square cards with thin borders, a green top bar on large cards, uppercase green section headings with a `>` prefix, softened named colours, scanlines, green glow, dark edges, subtle flicker and a short command-line boot sequence (optional: pick `Console CRT (no intro)` to skip it, or set `crt-boot-display: none`). Respects the system "reduce motion" setting. Customise colours and effects in `themes/console-crt.yaml`.
 
 **Limits:** cards with hard-coded colours keep them; the CRT filter covers dashboards, not the sidebar; the `>` heading prefix relies on the internal structure of Home Assistant's heading card and may disappear after an update.
 

@@ -2,8 +2,10 @@
 # texte kaki pâle et vert phosphore sur fond noir, avec filtre écran cathodique.
 # Les effets (filtre CRT, titres, barres des cartes) demandent card-mod.
 # https://github.com/Robote7701/console-crt-theme — Licence MIT.
-Console CRT:
+Console CRT: &console-crt
   card-mod-theme: Console CRT
+  # Séquence d'initialisation à l'ouverture d'un onglet : block = activée, none = désactivée
+  crt-boot-display: block
 
   # Polices
   primary-font-family: "\"Share Tech Mono\", \"VT323\", \"Courier New\", monospace"
@@ -219,9 +221,11 @@ Console CRT:
           radial-gradient(ellipse at center, transparent 62%, rgba(0, 0, 0, 0.28) 85%, rgba(0, 0, 0, 0.6) 100%);
         animation: crt-flicker 6s infinite steps(1, end);
       }
-      /* Séquence d'initialisation en ligne de commande à l'ouverture de l'onglet */
+      /* Séquence d'initialisation en ligne de commande à l'ouverture de l'onglet
+         (désactivable avec la variable crt-boot-display: none) */
       :host::before {
-        content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK\A> LECTURE DES CAPTEURS ........ OK\A> INTERFACE PRÊTE";
+        content: "> INITIALIZING CONSOLE...\A> READING SENSORS ............. OK\A> INTERFACE READY";
+        display: var(--crt-boot-display, block);
         position: fixed;
         inset: 0;
         z-index: 11;
@@ -240,19 +244,17 @@ Console CRT:
       }
       @keyframes crt-boot-text {
         0% { content: "█"; }
-        6% { content: "> INIT█"; }
-        12% { content: "> INITIALISATION DE█"; }
-        18% { content: "> INITIALISATION DE LA CONSOLE...█"; }
-        26% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .....█"; }
-        33% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK█"; }
-        40% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK\A> LECTURE DES CAPTEURS ...█"; }
-        48% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK\A> LECTURE DES CAPTEURS ........ OK█"; }
-        56% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK\A> LECTURE DES CAPTEURS ........ OK\A> INTERFACE PRÊTE█"; }
-        64% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK\A> LECTURE DES CAPTEURS ........ OK\A> INTERFACE PRÊTE"; }
-        70% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK\A> LECTURE DES CAPTEURS ........ OK\A> INTERFACE PRÊTE█"; }
-        76% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK\A> LECTURE DES CAPTEURS ........ OK\A> INTERFACE PRÊTE"; }
-        82% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK\A> LECTURE DES CAPTEURS ........ OK\A> INTERFACE PRÊTE█"; }
-        100% { content: "> INITIALISATION DE LA CONSOLE...\A> LIAISON MAISON .............. OK\A> LECTURE DES CAPTEURS ........ OK\A> INTERFACE PRÊTE█"; }
+        8% { content: "> INIT█"; }
+        15% { content: "> INITIALIZING CON█"; }
+        22% { content: "> INITIALIZING CONSOLE...█"; }
+        32% { content: "> INITIALIZING CONSOLE...\A> READING SENSORS ...█"; }
+        42% { content: "> INITIALIZING CONSOLE...\A> READING SENSORS ............. OK█"; }
+        52% { content: "> INITIALIZING CONSOLE...\A> READING SENSORS ............. OK\A> INTERFACE READY█"; }
+        60% { content: "> INITIALIZING CONSOLE...\A> READING SENSORS ............. OK\A> INTERFACE READY"; }
+        67% { content: "> INITIALIZING CONSOLE...\A> READING SENSORS ............. OK\A> INTERFACE READY█"; }
+        74% { content: "> INITIALIZING CONSOLE...\A> READING SENSORS ............. OK\A> INTERFACE READY"; }
+        81% { content: "> INITIALIZING CONSOLE...\A> READING SENSORS ............. OK\A> INTERFACE READY█"; }
+        100% { content: "> INITIALIZING CONSOLE...\A> READING SENSORS ............. OK\A> INTERFACE READY█"; }
       }
       @keyframes crt-boot-fade {
         0%, 84% { opacity: 1; visibility: visible; }
@@ -269,3 +271,9 @@ Console CRT:
         :host::after, :host::before { animation: none; }
         :host::before { display: none; }
       }
+
+# Même thème, sans la séquence d'initialisation.
+Console CRT (no intro):
+  <<: *console-crt
+  card-mod-theme: Console CRT (no intro)
+  crt-boot-display: none
