@@ -4,6 +4,8 @@ Thème Home Assistant façon **console de vaisseau des années 70-80** : fond qu
 
 ![Démonstration : séquence d'initialisation puis tableau de bord](images/demo.gif)
 
+💬 Discussion et retours sur le [forum HACF](https://forum.hacf.fr/t/theme-console-crt-console-de-vaisseau-retro-avec-filtre-crt-hacs/85669).
+
 > 🇬🇧 [English version below](#-english)
 
 ---
