@@ -1,6 +1,6 @@
 # Console CRT 📟
 
-Thème Home Assistant façon **console de vaisseau des années 70-80** : fond quasi noir, texte kaki pâle, vert phosphore en accent, police de terminal et **filtre écran cathodique** (lignes de balayage, halo, scintillement, allumage du tube à l'ouverture).
+Thème Home Assistant façon **console de vaisseau des années 70-80** : fond quasi noir, texte kaki pâle, vert phosphore en accent, police de terminal et **filtre écran cathodique** (lignes de balayage, halo, scintillement) et séquence d'initialisation en ligne de commande à l'ouverture.
 
 ![Aperçu (maquette)](images/preview.png)
 
@@ -14,7 +14,7 @@ Thème Home Assistant façon **console de vaisseau des années 70-80** : fond qu
 - **Cartes** à angles droits avec un liseré fin. Les grandes cartes (météo, graphiques, markdown, listes d'entités, lecteur média, thermostat) ont une barre verte en haut, comme les panneaux d'une console.
 - **Titres de section** en majuscules espacées, en vert, précédés d'un chevron `>`.
 - **Filtre CRT** : lignes de balayage, halo vert, bords assombris, texte légèrement lumineux et léger scintillement.
-- **Allumage du tube** : à l'ouverture d'un onglet, une ligne lumineuse s'ouvre puis l'écran apparaît.
+- **Initialisation** : à l'ouverture d'un onglet, quelques lignes de commande s'écrivent (« > INITIALISATION DE LA CONSOLE… », « > INTERFACE PRÊTE ») puis l'écran apparaît.
 - Respecte le réglage « réduire les animations » du système.
 
 ## ✅ Ce qu'il faut avant
@@ -46,7 +46,7 @@ Tout est dans `themes/console-crt.yaml` :
 
 - les couleurs en haut du fichier (`primary-color`, `primary-text-color`…) ;
 - l'intensité des lignes de balayage : `rgba(0, 0, 0, 0.20)` dans `card-mod-view` ;
-- l'animation d'allumage : supprime le bloc `:host::before` si tu n'en veux pas.
+- la séquence d'initialisation : change les textes dans `@keyframes crt-boot-text`, ou supprime le bloc `:host::before` si tu n'en veux pas.
 
 ## ⚠️ Limites
 
@@ -64,13 +64,13 @@ Tout est dans `themes/console-crt.yaml` :
 
 ## 🇬🇧 English
 
-A Home Assistant theme styled like a **1970s–80s starship console**: near-black background, pale khaki text, phosphor green accents, terminal fonts and a **CRT filter** (scanlines, glow, flicker and a tube power-on effect when a view opens).
+A Home Assistant theme styled like a **1970s–80s starship console**: near-black background, pale khaki text, phosphor green accents, terminal fonts and a **CRT filter** (scanlines, glow, flicker) and a command-line boot sequence when a view opens.
 
 **Requirements:** [card-mod](https://github.com/thomasloven/lovelace-card-mod) for the effects (without it, only the colours apply), and `frontend: themes: !include_dir_merge_named themes` in `configuration.yaml`.
 
 **Install:** HACS → Custom repositories → `https://github.com/Robote7701/console-crt-theme`, category **Theme** → Download → run `frontend.reload_themes`. For the fonts, add `https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap` as a **Stylesheet** dashboard resource. Then pick `Console CRT` in your profile, or set it on a single view.
 
-**What it does:** square cards with thin borders, a green top bar on large cards, uppercase green section headings with a `>` prefix, softened named colours, scanlines, green glow, dark edges, subtle flicker and a power-on animation. Respects the system "reduce motion" setting. Customise colours and effects in `themes/console-crt.yaml`.
+**What it does:** square cards with thin borders, a green top bar on large cards, uppercase green section headings with a `>` prefix, softened named colours, scanlines, green glow, dark edges, subtle flicker and a short command-line boot sequence (French text, editable in `@keyframes crt-boot-text`). Respects the system "reduce motion" setting. Customise colours and effects in `themes/console-crt.yaml`.
 
 **Limits:** cards with hard-coded colours keep them; the CRT filter covers dashboards, not the sidebar; the `>` heading prefix relies on the internal structure of Home Assistant's heading card and may disappear after an update.
 
